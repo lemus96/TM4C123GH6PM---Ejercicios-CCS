@@ -63,7 +63,7 @@ void Cambio_Estado(void){
 
 void Cambio_Frecuencia(void){
 
-	uint32_t boton = GPIOIntStatus(GPIO_PORTF_BASE, true);	//Máscara de bits de los puertos con interrupciones habilitadas
+	uint32_t boton = GPIOIntStatus(GPIO_PORTF_BASE, true);	//Máscara de bits de los pines con interrupciones habilitadas
 	GPIOIntClear(GPIO_PORTF_BASE, GPIO_PIN_4 | GPIO_PIN_0); //Limpia la bandera de interrupción del puerto F
 
 	switch (boton)
